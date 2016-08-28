@@ -20,7 +20,8 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">Flixter</a>
+	      <%= link_to 'Flixter', root_path, class: 'navbar-brand' %>
+
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -32,7 +33,7 @@
 	     	<% if user_signed_in? %>
 	     		<li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
 	     	<% else %>
-	     		<li><%= link_to 'Sign in', '#' %></li>
+	     		<li><%= link_to 'Sign in', user_session_path %></li>
 	     		<li><%= link_to 'Sign up', new_user_registration_path %></li>
 	     	<%end%>
 	        <li><a href="#">Link</a></li>
@@ -59,9 +60,9 @@
 
 <div id="footer">
 	<div class="container">
-	  <b>Footer Here</b>
+	  <b>Teachers</b>
 	  <br />
-	  <%= link_to 'Link', '#' %>
+	  <%= link_to 'Teach a Course', new_instructor_course_path %>
 	</div>
 </div>
 
